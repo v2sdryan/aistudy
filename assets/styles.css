@@ -178,6 +178,10 @@ li {
   align-items: end;
 }
 
+.hero-grid > * {
+  min-width: 0;
+}
+
 .overline {
   margin: 0 0 12px;
   color: #36597f;
@@ -188,10 +192,16 @@ li {
 
 .hero h1 {
   margin: 0 0 20px;
-  max-width: 10ch;
+  max-width: 12ch;
   font-family: "Noto Serif TC", serif;
   font-size: clamp(2.4rem, 6vw, 4.9rem);
-  line-height: 1.08;
+  line-height: 1.12;
+  word-break: keep-all;
+}
+
+.hero-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero h1 .accent {
@@ -348,6 +358,8 @@ li {
   font-family: "Noto Serif TC", serif;
   font-size: clamp(1.7rem, 3vw, 2.6rem);
   line-height: 1.2;
+  text-wrap: balance;
+  word-break: normal;
 }
 
 .section-copy {
@@ -721,7 +733,14 @@ li {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 11vw, 3.2rem);
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.14;
+    word-break: normal;
+  }
+
+  .hero-line {
+    white-space: normal;
   }
 
   .hero-note,
